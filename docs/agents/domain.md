@@ -1,0 +1,23 @@
+# Domain Docs
+
+## Before exploring, read these
+
+- **`CONTEXT.md`** at the repo root, or
+- **`CONTEXT-MAP.md`** at the repo root if it exists: it points at one `CONTEXT.md` per context.
+- **`docs/adr/`**: read ADRs that touch the area you're about to work in. In multi-context repos, also check `src/<context>/docs/adr/` for context-scoped decisions.
+
+If any of these files don't exist, proceed silently. Don't flag their absence; don't suggest creating them upfront. The `/domain-modeling` skill creates them lazily when terms or decisions are resolved.
+
+## File structure
+
+This repo uses a single context: root `CONTEXT.md` and root `docs/adr/`.
+
+## Use the glossary's vocabulary
+
+When output names a domain concept (in an issue title, refactor proposal, hypothesis, or test name), use the term as defined in `CONTEXT.md`. Don't drift to synonyms the glossary explicitly avoids.
+
+If the needed concept isn't in the glossary, reconsider whether it belongs in this project's domain language or note the gap for `/domain-modeling`.
+
+## Flag ADR conflicts
+
+If output contradicts an existing ADR, surface it explicitly rather than silently overriding it.
